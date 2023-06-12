@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>DRAGONQuest</title>
+  </head>
+  <header>
+    <h1>DRAGONQuest</h1>
+    <h2>
+      Enter the realm of Dragon Quest and embark on an epic journey to create
+      your own legendary dragon collection!
+    </h2>
+  </header>
+  <body>
+    <section>
+      <div class="dragon-display">
+        <main></main>
+        <div class="pagination">
+          <button onclick="previousPage()">previousPage</button>
+          <button onclick="nextPage()">Next page</button>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="add">
+          <p>Add a dragon</p>
+          <form id="form-add" onsubmit="return false">
+            <input type="text" id="name" placeholder="Viserion" />
+            <select id="element">
+              <option value="water">water</option>
+              <option value="fire">fire</option>
+            </select>
+            <input type="submit" value="submit" class="submit" />
+          </form>
+        </div>
+        <div class="modify">
+          <p>Modify a dragon</p>
+          <form id="form-modify" onsubmit="return false">
+            <select id="dragon-name" onchange="changePlaceholder()"></select>
+            <input type="text" id="name-modify" placeholder="Viserion" />
+            <select id="element-modify">
+              <option value="water">water</option>
+              <option value="fire">fire</option>
+            </select>
+            <input type="submit" value="submit" class="submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="dragon.js"></script>
+  </body>
+</html>
